@@ -5,11 +5,12 @@ class MP3Importer
     @path = path
   end
   
-  def files(file)
-    file = self.path.split(",")
-    
+  def files
+    Dir.chdir(self.path) do |path|
+      path.glob(*.mp3)
+    end
   end
-  
+
 
   def import
   end
