@@ -6,7 +6,7 @@ class MP3Importer
   end
   
   def files
-      Dir.chdir(selfpath) do |path|
+      Dir.chdir(self.path) do |path|
       Dir.glob("*.mp3")
     end
   end
