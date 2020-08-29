@@ -7,7 +7,7 @@ class MP3Importer
   
   def files
     Dir.chdir(self.path) do |path|
-      path.glob(*.mp3)
+      path.glob(*mp3)
     end
   end
 
